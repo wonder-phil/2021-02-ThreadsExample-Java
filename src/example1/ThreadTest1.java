@@ -10,14 +10,14 @@ public class ThreadTest1 {
 		Thread thread_1 = new Thread("Thread 1") {
 			@Override
 			public void run() {
-				my_methdod();
+				my_method();
 			}
 		};
 		
 		Thread thread_2 = new Thread("Thread 2") {
 			@Override
 			public void run() {
-				my_methdod();
+				my_method();
 			}
 		};
 		
@@ -34,7 +34,7 @@ public class ThreadTest1 {
 	
 	}
 	
-	public static void my_methdod() {
+	public static void my_method() {
 		a = a+5;
 		b = b+5;
 	}
