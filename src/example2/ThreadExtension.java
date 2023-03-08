@@ -6,18 +6,20 @@ public class ThreadExtension extends Thread {
 	
 	public ThreadExtension(Share share, String t_name) {
 		this.setName(t_name);
-		this.share = share;
+		this.share = new Share(9);
 	}
 	
 	@Override
 	public void run() {
+		/* */
 		share.x += 5;
 		share.y += 5;
-		int s = share.getSecret();
-		if (this.getName() == "Thread_A") {
-			share.setSecret(s+10);
+		/* */
+		int s = share.getClassSecret();
+		if (this.getName() == "Thread_AAA") {
+			share.setClassSecret(s+10);
 		} else {
-			share.setSecret(s+100);
+			share.setClassSecret(s+100);
 		}
 	}
 }
